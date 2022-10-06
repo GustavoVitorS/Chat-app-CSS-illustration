@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="css/all.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <style>
+    .attribution { font-size: 11px; text-align: center; padding-bottom: 3em; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <title>Frontend Mentor | Ilustração CSS do aplicativo de bate-papo</title>
+</head>
+<body>
+
+
+  <div class="bg bg--purple"></div>
+  <div class="bg bg--gray"></div>
+
+  <main>
+
+    <div class="illustration">
+      <div class="phone">
+        <div class="phone__frame">
+
+            <div class="phone__top">
+              <div class="phone__back">
+                <i class="fas fa-chevron-left"></i>
+              </div>
+
+              <div class="phone__heading">
+                <div class="phone__avatar">
+                  <img src="images/avatar.jpg" alt="Samuel Green" />
+                </div>
+                <div class="phone__profile">
+                  <h2 class="phone__name">Samuel Green</h2>
+                  <h3 class="phone__status">Disponível para andar</h3>
+                </div>
+              </div>
+
+              <div class="phone__menu">
+                <i class="fas fa-ellipsis-v"></i>
+              </div>
+            </div>
+
+            <div id="phoneMessageList" class="phone__messages">
+              <div class="phone__message phone__message--received">
+                Isso parece ótimo. Eu ficaria feliz com isso.
+              </div>
+
+              <div class="phone__message phone__message--received">
+                Você poderia enviar algumas fotos do seu cachorro, por favor?
+              </div>
+
+              <div class="phone__message phone__message--attachment">
+                <div>
+                  <img alt="Dog 1" src="images/dog-image-1.jpg" />
+                </div>
+                <div>
+                  <img alt="Dog 2" src="images/dog-image-2.jpg" />
+                </div>
+                <div>
+                  <img alt="Dog 3" src="images/dog-image-3.jpg" />
+                </div>
+              </div>
+
+              <div class="phone__message phone__message--sent">
+                Aqui estão algumas fotos. Ela é uma garota feliz!
+              </div>
+
+              <div class="phone__message phone__message--sent">
+                Você pode fazer isso?
+              </div>
+
+              <div class="phone__message phone__message--received">
+                Ela parece tão feliz! O tempo que discutimos funciona. Quanto tempo devo levá-la para fora?
+              </div>
+
+              <div class="phone__message phone__message--interactive">
+                <i class="far fa-circle phone__radio"></i>
+                <span class="phone__desc">30 minutos de caminhada</span>
+                <span class="phone__rate">R$29</span>
+              </div>
+
+              <div class="phone__message phone__message--interactive">
+                <i class="far fa-circle phone__radio"></i>
+                <span class="phone__desc">1 hora de caminhada</span>
+                <span class="phone__rate">R$49</span>
+              </div>
+            </div>
+
+
+            <div class="phone__new-message">
+              <form id="newMessageForm">
+              <input type="text" id="newMessage" name="newMessage" autocomplete="off"
+                    placeholder="Digite uma mensagem..."
+                    aria-label="Type a message">
+              <button type="submit" aria-label="Send Message">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+              </form>
+            </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="introduction">
+      <h1 class="introduction__heading">Reserva simples</h1>
+
+      <p class="introduction__description">Fique em contato com nossos passeadores de cães através da interface de bate-papo. Isso facilita a
+        discutir arranjos e fazer reservas. Uma vez que a caminhada foi concluída, você pode avaliar
+        seu andador e reserve novamente durante todo o chat.</p>
+    </div>
+
+  </main>
+
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bg {
+  position: fixed;
+  z-index: -1;
+  content: "";
+  width: 400px;
+  height: 50%;
+}
+
+.bg--purple {
+  top: 0;
+  left: -210px;
+  height: 60%;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 250px;
+  background-image: linear-gradient(45deg, #8838ff, #e942ff);
+}
+
+.bg--gray {
+  bottom: 0;
+  right: -210px;
+  border-top-left-radius: 600px;
+  border-top-right-radius: 250px;
+  background-color: #f5f3f7;
+}
+
+.phone {
+  width: 250px;
+  min-height: 300px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 15px 25px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 15px 25px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  padding: 9px;
+  font-size: 0.48rem;
+}
+
+.phone__frame {
+  position: relative;
+  height: 100%;
+  border-radius: 25px;
+  background-color: #f5f3f7;
+  overflow: hidden;
+}
+
+.phone__frame::before {
+  content: "";
+  position: absolute;
+  z-index: 9999915;
+  top: -18.42105px;
+  left: 50%;
+  margin-left: -30%;
+  width: 60%;
+  height: 35px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.phone__top {
+  padding: 32px 20px 10px;
+  background-image: linear-gradient(45deg, #8838ff, #e942ff);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.phone__heading {
+  text-align: left;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.phone__avatar {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+}
+
+.phone__avatar img {
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.phone__name {
+  font-weight: 500;
+}
+
+.phone__status {
+  color: #d89eff;
+  font-weight: 400;
+}
+
+.phone__messages {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.phone__messages::-webkit-scrollbar {
+  width: 5px;
+}
+
+.phone__messages::-webkit-scrollbar-track {
+  width: 5px;
+  background-color: #eee;
+}
+
+.phone__messages::-webkit-scrollbar-thumb {
+  background-color: #c8c8c8;
+}
+
+.phone__messages::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
+
+.phone__message {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  max-width: 54%;
+  background-color: white;
+  border-radius: 12px;
+  padding: 7px 8px;
+  margin: 0 9px 8px;
+  text-align: left;
+  line-height: 0.8rem;
+}
+
+.phone__message:first-child {
+  margin-top: 11px;
+}
+
+.phone__message--sent {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-bottom-right-radius: 4px;
+  color: #6e5d7e;
+}
+
+.phone__message--received {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border-bottom-left-radius: 4px;
+  background-color: #ede5f2;
+  color: #9241c8;
+}
+
+.phone__message--attachment {
+  max-width: 90%;
+  background-color: transparent;
+  padding: 0;
+  margin-top: 11px;
+  margin-bottom: 7px;
+}
+
+.phone__message--attachment div {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+}
+
+.phone__message--attachment img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.phone__message--interactive {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border-bottom-left-radius: 4px;
+  background-image: linear-gradient(45deg, #e942ff, #8838ff);
+  padding: 7px 23px 7px 10px;
+  color: white;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 65%;
+  width: 65%;
+  -webkit-column-gap: 9px;
+          column-gap: 9px;
+}
+
+.phone__radio {
+  color: #e570ff;
+  font-size: 0.9rem;
+}
+
+.phone__desc {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-weight: 500;
+  color: #d89eff;
+}
+
+.phone__rate {
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.phone__new-message {
+  position: relative;
+  margin: 5px 9px 10px;
+}
+
+.phone__new-message input {
+  width: 100%;
+  height: 30px;
+  border: 0;
+  border-radius: 30px;
+  padding: 5px 45px 4px 15px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.6rem;
+}
+
+.phone__new-message input::-webkit-input-placeholder {
+  color: #c6cacd;
+}
+
+.phone__new-message input:-ms-input-placeholder {
+  color: #c6cacd;
+}
+
+.phone__new-message input::-ms-input-placeholder {
+  color: #c6cacd;
+}
+
+.phone__new-message input::placeholder {
+  color: #c6cacd;
+}
+
+.phone__new-message button {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 4px;
+  right: 4px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #3e2753;
+  font-size: 0.6rem;
+  color: white;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: button-pulse 2s infinite;
+          animation: button-pulse 2s infinite;
+}
+
+.phone__new-message button:hover {
+  background-color: #654087;
+}
+
+@-webkit-keyframes button-pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(216, 158, 255, 0.7);
+            box-shadow: 0 0 0 0 rgba(216, 158, 255, 0.7);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(255, 92, 61, 0);
+            box-shadow: 0 0 0 10px rgba(255, 92, 61, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 92, 61, 0);
+            box-shadow: 0 0 0 0 rgba(255, 92, 61, 0);
+  }
+}
+
+@keyframes button-pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(216, 158, 255, 0.7);
+            box-shadow: 0 0 0 0 rgba(216, 158, 255, 0.7);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(255, 92, 61, 0);
+            box-shadow: 0 0 0 10px rgba(255, 92, 61, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 92, 61, 0);
+            box-shadow: 0 0 0 0 rgba(255, 92, 61, 0);
+  }
+}
+
+main {
+  width: 85%;
+  margin: 4em 0;
+}
+
+.illustration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.introduction {
+  margin-top: 4em;
+  text-align: center;
+}
+
+.introduction__heading {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #3e2753;
+  margin-bottom: 0.5em;
+}
+
+.introduction__description {
+  color: #a39daa;
+  line-height: 1.7rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .bg {
+    width: 500px;
+    height: 700px;
+  }
+  .bg--purple {
+    left: -135px;
+    border-bottom-left-radius: 600px;
+    border-bottom-right-radius: 600px;
+  }
+  .bg--gray {
+    right: -110px;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 200px;
+  }
+  main {
+    max-width: 815px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 7em;
+            column-gap: 7em;
+  }
+  .introduction {
+    margin-top: 0;
+    text-align: left;
+  }
+  .introduction__heading {
+    font-size: 2.5rem;
+    margin-bottom: 0.3em;
+  }
+  .introduction__description {
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
